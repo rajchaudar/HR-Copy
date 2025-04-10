@@ -69,7 +69,7 @@ app.use(cors());
 
 // ✅ Whitelist only / and /reset-password, show HTML for browser
 app.use((req, res, next) => {
-    const allowedOrigins = [process.env.FRONTEND_URL, "http://127.0.0.1:5500",undefined];
+    const allowedOrigins = [process.env.FRONTEND_URL];
     const origin = req.headers.origin;
     const publicRoutes = ['/', '/reset-password'];
 
